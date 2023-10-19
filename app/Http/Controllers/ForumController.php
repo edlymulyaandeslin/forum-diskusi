@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Cviebrock\EloquentSluggable\Services\SlugService;
-use RealRashid\SweetAlert\Facades\Alert;
 
 
 class ForumController extends Controller
@@ -67,7 +66,7 @@ class ForumController extends Controller
 
         return view('dashboard.forum.show', [
             'question' => $question,
-            'comments' => Comment::where('question_id', $id)->get()
+            'comments' => Comment::where('question_id', $id)->get(),
         ]);
     }
 

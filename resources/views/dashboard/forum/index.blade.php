@@ -24,29 +24,34 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($questions as $question)
+                @if (count($questions) > 0)
+                    @foreach ($questions as $question)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $question->title }}</td>
+                            <td>
+                                <a href="/dashboard/forum/{{ $question->id }}" class="badge bg-primary"><span
+                                        data-feather="eye"></span></a>
+
+                                <a href="/dashboard/forum/{{ $question->id }}/edit" class="badge bg-warning"><span
+                                        data-feather="edit"></span></a>
+
+                                <form action="/dashboard/forum/{{ $question->id }}" method="post" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                    <button type="submit" class="badge bg-danger border-0"
+                                        onclick="return confirm('Are you sure?')"><span
+                                            data-feather="slash"></span></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
                     <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <td>{{ $question->title }}</td>
-                        <td>
-                            <a href="/dashboard/forum/{{ $question->id }}" class="badge bg-primary"><span
-                                    data-feather="eye"></span></a>
-
-                            <a href="/dashboard/forum/{{ $question->id }}/edit" class="badge bg-warning"><span
-                                    data-feather="edit"></span></a>
-
-                            <form action="/dashboard/forum/{{ $question->id }}" method="post" class="d-inline">
-                                @method('delete')
-                                @csrf
-                                <button type="submit" class="badge bg-danger border-0"
-                                    onclick="return confirm('Yakin ingin menghapus?')"><span
-                                        data-feather="slash"></span></button>
-                            </form>
-                        </td>
+                        <td colspan="3" class="text-center border-bottom-0">No data</td>
                     </tr>
-                @endforeach
+                @endif
             </tbody>
         </table>
-
     </div>
 @endsection
