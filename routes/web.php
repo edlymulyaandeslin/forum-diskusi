@@ -22,7 +22,7 @@ use App\Http\Controllers\DashboardForumController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->middleware('auth');
 
 // Login
