@@ -1,11 +1,13 @@
 <?php
 
+use App\Models\Question;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardForumController;
-use App\Http\Controllers\ForumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,7 @@ use App\Http\Controllers\ForumController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
 // Login
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -33,13 +35,19 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
+// dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard.index', [
+        'questions' => Question::latest()->get()
+    ]);
+})->middleware('auth');
 
 // my forum
 Route::resource('/dashboard/forum', ForumController::class)->middleware('auth');
 Route::get('/dashboard/checkslug', [ForumController::class, 'checkSlug']);
 
-// dashboard
-Route::resource('/dashboard', DashboardForumController::class)->middleware('auth');
-
-
+// comment
 Route::resource('/dashboard/comment', CommentController::class);
+
+// profile
+Route::resource('/dashboard/profile', UserController::class);

@@ -9,12 +9,12 @@
     <h1 class="text-center">{{ $question->title }}</h1>
     <h6 class="text-center text-secondary">{{ $question->user->name }} - {{ $question->category->name }}</h6>
 
-    <div class="mb-4">
+    <div>
         <a href="/dashboard" class="btn btn-sm btn-outline-danger"><span data-feather="arrow-left"></span> Back to
             forum</a>
     </div>
-
     <p class="text-end">{{ $question->created_at->diffForHumans() }}</p>
+
     <div class="border rounded p-2">
         <p>{!! $question->desc !!}</p>
 
@@ -54,7 +54,7 @@
     </div>
 
     @foreach ($comments as $comment)
-        <div class="col-md-8 ms-2 mb-3 mt-4 border border-top-0">
+        <div class="col-md-8 ms-2 my-3 border border-top-0">
             <div class="d-flex align-items-start mt-2">
                 <div class="ms-2">
                     <span data-feather="user"></span>
@@ -68,16 +68,18 @@
                         {!! $comment->desc !!}
                     </div>
 
-                    @auth
+                    @if (auth()->user()->id === $comment->user->id)
                         <div class="ms-2">
                             <form action="/dashboard/comment/{{ $comment->id }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class="badge bg-danger border-0"><span data-feather="slash"></span></button>
+                                <button class="btn btn-sm btn-danger border-0">Hapus Comment</button>
                             </form>
-                            <a class="badge bg-warning border-0"><span data-feather="edit"></span></a>
                         </div>
-                    @endauth
+                    @else
+                        {{ '' }}
+                    @endif
+
                 </div>
             </div>
         </div>
