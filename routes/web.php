@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Models\Question;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -50,4 +51,7 @@ Route::get('/dashboard/checkslug', [ForumController::class, 'checkSlug']);
 Route::resource('/dashboard/comment', CommentController::class);
 
 // profile
-Route::resource('/dashboard/profile', UserController::class);
+Route::resource('/dashboard/profile', UserController::class)->middleware('auth');
+
+// categories
+Route::resource('/dashboard/categories', CategoryController::class)->except('show')->middleware('admin');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class CategoryController extends Controller
 {
@@ -12,7 +13,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.category.index', [
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -20,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.category.create');
     }
 
     /**
@@ -28,7 +31,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'name' => 'required|unique:categories'
+        ]);
+
+        Category::create($validateData);
+
+        return redirect('/dashboard/categories')->with('success', 'Category added successfully!');
     }
 
     /**
@@ -42,24 +51,38 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+
+        return view('dashboard.category.edit', [
+            'category' => Category::find($id)
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update($id, Request $request)
     {
-        //
+        $category = Category::find($id);
+
+        $validateData = $request->validate([
+            'name' => 'required|unique:categories'
+        ]);
+
+        Category::where('id', $category->id)->update($validateData);
+
+        return redirect('/dashboard/categories')->with('success', 'Category has been updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+
+        Category::destroy($id);
+
+        return back()->with('success', 'Category has been deleted!');
     }
 }
