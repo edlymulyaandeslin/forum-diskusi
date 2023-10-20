@@ -10,7 +10,7 @@
     <div class="d-flex flex-column flex-wrap flex-md-nowrap  pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Update Profile</h1>
     </div>
-    <div class="col-md-8 mb-3">
+    <div class="col-md-8 mb-3 ">
         <form action="/dashboard/profile/{{ $profiles->id }}" method="POST" class="row g-3">
             @method('put')
             @csrf
@@ -56,8 +56,9 @@
                 <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $profiles->alamat }}">
             </div>
 
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <button type="submit" class="btn btn-success">Update</button>
+                <a href="/dashboard/profile" class="btn btn-danger">Back</a>
             </div>
         </form>
     </div>

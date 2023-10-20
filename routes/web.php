@@ -38,9 +38,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 // dashboard
 Route::get('/dashboard', function () {
-
-    
-
     return view('dashboard.index', [
         'questions' => Question::latest()->filter(request(['search']))->get()
     ]);
@@ -55,6 +52,7 @@ Route::resource('/dashboard/comment', CommentController::class);
 
 // profile
 Route::resource('/dashboard/profile', UserController::class)->middleware('auth');
+
 
 // categories
 Route::resource('/dashboard/categories', CategoryController::class)->except('show')->middleware('admin');
