@@ -100,21 +100,19 @@ body {
 }
 
 /* conten profile */
-.jumbotron{
+.jumbotron {
     background-image: url(../img/boxed-bg.jpg);
 }
-.jumbotron .btn{
+.jumbotron .btn {
     margin-bottom: 10px;
 }
-.jumbotron .p{
+.jumbotron .p {
     padding-bottom: -0;
 }
 
 /* index */
-.col-md-8{
+.img {
     background-image: url(../img/boxed-bg.jpg);
     padding: 30px;
     margin: 0 auto;
 }
-
-
