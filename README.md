@@ -79,6 +79,15 @@ Alur dan Fitur Utama:
 6. User dapat membuat, dan menghapus jawaban milik sendiri
 7. Seorang User dapat mengubah profile nya sendiri.
 
+## Installation
+
+1. git clone https://github.com/edlymulyaandeslin4/forum-diskusi.git
+2. composer install
+3. cp .env.example .env
+4. php artisan migrate
+5. php artisan serve
+   done
+
 ## Create by
 
 1. Edly Mulya Andeslin
