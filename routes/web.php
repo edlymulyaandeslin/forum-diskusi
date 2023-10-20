@@ -38,8 +38,11 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 // dashboard
 Route::get('/dashboard', function () {
+
+    
+
     return view('dashboard.index', [
-        'questions' => Question::latest()->get()
+        'questions' => Question::latest()->filter(request(['search']))->get()
     ]);
 })->middleware('auth');
 
