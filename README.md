@@ -86,7 +86,6 @@ Alur dan Fitur Utama:
 3. cp .env.example .env
 4. php artisan migrate
 5. php artisan serve
-   done
 
 ## Create by
 
