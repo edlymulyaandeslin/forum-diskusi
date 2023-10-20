@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('dashboard.profile.index', [
+        return view('dashboard.profile.display', [
             'profiles' => auth()->user()
         ]);
     }
@@ -46,7 +46,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('dashboard.profile.index', [
+            'profiles' => auth()->user()
+        ]);
     }
 
     /**
