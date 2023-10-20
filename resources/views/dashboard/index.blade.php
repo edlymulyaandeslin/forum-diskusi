@@ -5,6 +5,19 @@
         <h6>Hallo, {{ auth()->user()->name }}</h6>
         <h1 class="h2">Selamat Datang di Forum Diskusi </h1>
     </div>
+    
+    <div class="d-flex justify-content-end" >
+        <div class="col-md-4 ">
+            <form action="/dashboard">
+            <div class="input-group mb-3">
+                <input type="text" name="search" class="form-control" placeholder="search" autofocus >
+                
+              </div>
+            </form>
+        </div>
+        
+    </div>
+    
 
     <div class="d-flex justify-content-end">
         <div class="col-md-4">

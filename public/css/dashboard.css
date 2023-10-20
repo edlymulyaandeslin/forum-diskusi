@@ -98,3 +98,23 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
+
+/* conten profile */
+.jumbotron{
+    background-image: url(../img/boxed-bg.jpg);
+}
+.jumbotron .btn{
+    margin-bottom: 10px;
+}
+.jumbotron .p{
+    padding-bottom: -0;
+}
+
+/* index */
+.col-md-8{
+    background-image: url(../img/boxed-bg.jpg);
+    padding: 30px;
+    margin: 0 auto;
+}
+
+

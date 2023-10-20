@@ -2,6 +2,7 @@
 <div class="form-container sign-in">
 
     <form method="POST" action="/login">
+        @csrf
         @if (session()->has('success'))
             <div class="alert alert-success" role="alert">
                 {{ session('success') }}
@@ -12,7 +13,6 @@
                 {{ session('loginError') }}
             </div>
         @endif
-        @csrf
         <h1>Sign In</h1>
         <div class="input-container">
             <span><i class="fa-solid fa-user"></i></span>
