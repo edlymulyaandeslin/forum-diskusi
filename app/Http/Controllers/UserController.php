@@ -69,7 +69,7 @@ class UserController extends Controller
 
         User::where('id', $profile->id)->update($validateData);
 
-        return redirect()->back()->with('success', 'Update profile successfully!');
+        return redirect('dashboard/profile')->with('success', 'Update profile successfully!');
     }
 
     /**
