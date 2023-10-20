@@ -91,7 +91,10 @@ Alur dan Fitur Utama:
    github : https://github.com/laskaprayoga
 
     link vidio :
+
     link ERD : https://drive.google.com/file/d/1MigGoxGoRBXl760_9IQjExzFjkP5YNgr/view?usp=share_link
+
+    link web yang sudah dihosting : https://fdteampku.000webhostapp.com/
 
 ## Library
 
