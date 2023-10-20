@@ -17,15 +17,9 @@ class Question extends Model
 
     public function scopeFilter($query, array $filters)
     {
-<<<<<<< HEAD
         $query->when($filters['search'] ?? false, function ($query, $search) {
-            return $query->where('title', 'like', '%' . $search .  '%')
+            return $query->where('title', 'like', '%' . $search . '%')
                 ->orWhere('desc', 'like', '%' . $search . '%');
-=======
-        $query->when($filters['search'] ?? false, function($query, $search){
-            return $query->where('title', 'like', '%'. $search. '%')
-            ->orWhere('desc','like','%'. $search. '%');
->>>>>>> 71ac97238a24d04308916935d3de72e92bf8e11c
         });
     }
 

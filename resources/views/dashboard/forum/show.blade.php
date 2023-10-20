@@ -19,8 +19,8 @@
         <p>{!! $question->desc !!}</p>
 
         @if ($question->image)
-            <div class="col-md-8">
-                <img src="{{ asset('storage/' . $question->image) }}" alt="noImg" class="img-fluid w-50 mb-3">
+            <div class="col-md-6">
+                <img src="{{ asset('storage/' . $question->image) }}" class="img-fluid mb-3">
             </div>
         @else
             <div class="col-md-8">

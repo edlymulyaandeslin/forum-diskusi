@@ -4,10 +4,7 @@
         data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 71ac97238a24d04308916935d3de72e92bf8e11c
+
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
             <form action="/logout" method="post" class="border-left">

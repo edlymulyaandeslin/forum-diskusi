@@ -11,13 +11,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -35,19 +35,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Cubet Techno Labs](https://cubettech.com)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[Many](https://www.many.co.uk)**
+-   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+-   **[DevSquad](https://devsquad.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[OP.GG](https://op.gg)**
+-   **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+-   **[Lendio](https://lendio.com)**
 
 ## Contributing
 
@@ -64,3 +64,35 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Web Application FD Team Pku
+
+Forum Diskusi Bersama adalah platform interaktif tempat pengguna dapat berbagi, berdiskusi, dan memperoleh wawasan dari berbagai topik yang menarik. Dengan antarmuka yang ramah pengguna, aplikasi ini memungkinkan anggota untuk membuat dan menjawab posting, mengajukan pertanyaan, serta berpartisipasi dalam percakapan yang bermanfaat. Anda dapat menemukan komunitas dengan minat serupa, mengeksplorasi berbagai topik, dan membangun jaringan yang berharga.
+
+Alur dan Fitur Utama:
+
+1. User harus terdaftar di web untuk menggunakan layanan Forum
+2. User dapat membuat pertanyaan berupa: tulisan, gambar, dan kategorinya.
+3. Hanya Admin yang dapat menghapus, mengedit, dan menambah kategori
+4. User dapat membuat, mengedit, dan menghapus pada pertanyaan milik sendiri.
+5. Seorang User dapat memberi jawaban dari pertayaan User lainnya.
+6. User dapat membuat, dan menghapus jawaban milik sendiri
+7. Seorang User dapat mengubah profile nya sendiri.
+
+## Create by
+
+1. Edly Mulya Andeslin
+   github : https://github.com/edlymulyaandeslin4
+2. Sayyid Ja'far Shodiq Al Husaini
+   github : https://github.com/saydjfr
+3. Rian Lesmana Putra
+   github : https://github.com/rianlesmanaputra17
+4. Laska Dwi Prayoga
+   github : https://github.com/laskaprayoga
+
+    link vidio :
+    link ERD : https://drive.google.com/file/d/1MigGoxGoRBXl760_9IQjExzFjkP5YNgr/view?usp=share_link
+
+## Library
+
+Bootstrap
