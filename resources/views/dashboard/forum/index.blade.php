@@ -39,8 +39,8 @@
                                 <form action="/dashboard/forum/{{ $question->id }}" method="post" class="d-inline">
                                     @method('delete')
                                     @csrf
-                                    <button type="submit" class="badge bg-danger border-0"
-                                        onclick="return confirm('Are you sure?')"><span
+                                    <button type="submit" class="badge bg-danger border-0" id="hapus"
+                                        onclick="return confirm('yakin ingin menghapus?')"><span
                                             data-feather="slash"></span></button>
                                 </form>
                             </td>
@@ -54,4 +54,5 @@
             </tbody>
         </table>
     </div>
+
 @endsection

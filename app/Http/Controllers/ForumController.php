@@ -123,6 +123,7 @@ class ForumController extends Controller
      */
     public function destroy($id)
     {
+
         $question = Question::find($id);
 
         if ($question->image) {

@@ -6,6 +6,17 @@
         <h1 class="h2">Selamat Datang di Forum Diskusi </h1>
     </div>
 
+    <div class="d-flex justify-content-end">
+        <div class="col-md-4">
+            <form action="/dashboard">
+                <div class="input-group mb-3 d-flex justify-content-center align-items-center">
+                    <input type="text" name="search" class="form-control" placeholder="Search"
+                        value="{{ request('search') }}" autofocus>
+                </div>
+            </form>
+        </div>
+    </div>
+
     @foreach ($questions as $question)
         <div class="card mb-3">
             <h5 class="card-header">{{ $question->title }}</h5>
