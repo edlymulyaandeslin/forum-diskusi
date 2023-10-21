@@ -98,7 +98,7 @@ Alur dan Fitur Utama:
 4. Laska Dwi Prayoga
    github : https://github.com/laskaprayoga
 
-    link vidio :
+    link vidio : https://drive.google.com/drive/folders/1rYXLyr8g3AnLqh6hEtXMJR1giRr5TI8f?usp=sharing
 
     link ERD : https://drive.google.com/file/d/1MigGoxGoRBXl760_9IQjExzFjkP5YNgr/view?usp=share_link
 
